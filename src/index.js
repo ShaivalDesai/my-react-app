@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 // import Image from './Image.js';
 // import { createRoot } from 'react-dom/client';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -13,6 +14,4 @@ root.render(
   </React.StrictMode>
   
 );
-
-
 

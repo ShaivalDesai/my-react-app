@@ -95,7 +95,6 @@
 //   );
 // }
 
-
 // import { useState } from 'react';
 // import { sculptureList } from './data.js';
 
@@ -139,18 +138,18 @@
 //         Next
 //       </button>
 //       {/* <h2>
-//         <i>{sculpture.name} </i> 
+//         <i>{sculpture.name} </i>
 //         by {sculpture.artist}
 //       </h2>
-//       <h3>  
+//       <h3>
 //         ({index + 1} of {sculptureList.length})
 //       </h3>
 //       <button onClick={handleMoreClick}>
 //         {showMore ? 'Hide' : 'Show'} details
 //       </button>
 //       {showMore && <p>{sculpture.description}</p>}
-//       <img 
-//         src={sculpture.url} 
+//       <img
+//         src={sculpture.url}
 //         alt={sculpture.alt} */}
 //       {/* /> */}
 //     </>
@@ -190,19 +189,345 @@
 //   )
 // }
 
+// import { useState } from "react";
+
+// export default function Form(){
+
+// const[isSent,setIsSent]=useState(false);
+// const[message,setMessage]=useState("hii");
+
+// if(isSent)
+// {
+//   return <h1>Your message is sent!</h1>
+// }
+//   return(
+//     <>
+
+//     </>
+//   )
+// }
+
+// import { useState } from "react";
+
+// export default function Counter() {
+//   const [number, setNumber] = useState(0);
+//   return(
+//   <>
+//     <h1>{number}</h1>
+//     <button
+//       onClick={() => {
+//         setNumber(number + 2);
+//         // setNumber(number + 1);
+//       }}
+//     >
+//       Click
+//     </button>
+//   </>
+//   )
+// }
+
+// import { useState } from "react";
+
+// export default function Form() {
+//   const [to, setTo] = useState("Alice");
+//   const [message, setMessage] = useState("Hello");
+
+//   function handleSubmit(e) {
+//     e.preventDefault();
+//     setTimeout(() => {
+//       alert(`your ${message} is to ${to} `);
+//     }, 3000);
+//   }
+
+//   return (
+//     <>
+//       <form onSubmit={handleSubmit}>
+//         <label>
+//           To:
+//           <select onChange={(e) => setTo(e.target.value)}>
+//             <option value="Alice">Alice</option>
+//             <option value="Bob">Bob</option>
+//           </select>
+//           <textarea
+//             placeholder="Alice"
+//             onChange={(e) => setMessage(e.target.value)}
+//           ></textarea>
+//           <button type="submit">Send</button>
+//         </label>
+//       </form>
+//     </>
+//   );
+// }
+
+
+// import { useState } from "react";
+// export default function Counter()
+// {
+//   const [number,setNumber]=useState(0);
+//   return(
+//     <>
+//    <h1>{number}</h1>
+//    <button onClick={()=>
+//   {
+//     setNumber(n=>n+1);
+//     setNumber(n=>n+1);
+//     setNumber(n=>n+1);
+
+//   }}>Click</button>
+//     </>
+//   )
+// }
+
+
+// import { useState } from "react";
+
+// export default function Form()
+// {
+//   const[person,setPerson]=useState({
+//     firstName:"Shaival",
+//     lastName:"Desai",
+//     email:"shaival123@gmail.com"
+//   });
+
+//   function addfirstName(e){
+//   setPerson({
+//     ...person,
+//     firstName:e.target.value
+//   });
+// }
+
+// function addlastName(e)
+// {
+//   setPerson({
+//     ...person,
+//     lastName:e.target.value
+//   })
+// }
+
+// function addEmail(e)
+// {
+//   setPerson({
+//     ...person,
+//     email:e.target.value
+//   })
+// }
+
+
+// return
+// (
+//   <>
+//    <label>
+//         First name:
+//         <input
+          
+//           onChange={addfirstName}
+//         />
+//       </label>
+//       <label>
+//         Last name:
+//         <input
+//           value={person.lastName}
+//           onChange={addlastName}
+//         />
+//       </label>
+//       <label>
+//         Email:
+//         <input
+//           value={person.email}
+//           onChange={addEmail}
+//         />
+//       </label>
+//       <p>
+//         {person.firstName}{' '}
+//         {person.lastName}{' '}
+//         ({person.email})
+//       </p>
+
+//   </>
+// )
+// }
+
+// import { useState } from 'react';
+
+// let initialArtists = [
+//   { id: 0, name: 'Marta Colvin Andrade' },
+//   { id: 1, name: 'Lamidi Olonade Fakeye'},
+//   { id: 2, name: 'Louise Nevelson'},
+// ];
+
+// export default function List() {
+//   const [artists, setArtists] = useState(
+//     initialArtists
+//   );
+
+//   return (
+//     <>
+//       <h1>Inspiring sculptors:</h1>
+//       <ul>
+//         {artists.map(artist => (
+//           <li>
+//             {artist.name}
+//             <button onClick={() => {
+//               setArtists(
+//                 artists.filter(a =>
+//                   a.id !== artist.id
+//                 )
+//               );
+//             }}>
+//               Delete
+//             </button>
+//           </li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// }
+
+
+
+// async function handleFormSubmit(e) {
+//   e.preventDefault();
+//   disable(textarea);
+//   disable(button);
+//   show(loadingMessage);
+//   hide(errorMessage);
+//   try {
+//     await submitForm(textarea.value);
+//     show(successMessage);
+//     hide(form);
+//   } catch (err) {
+//     show(errorMessage);
+//     errorMessage.textContent = err.message;
+//   } finally {
+//     hide(loadingMessage);
+//     enable(textarea);
+//     enable(button);
+//   }
+// }
+
+// function handleTextareaChange() {
+//   if (textarea.value.length === 0) {
+//     disable(button);
+//   } else {
+//     enable(button);
+//   }
+// }
+
+// function hide(el) {
+//   el.style.display = 'none';
+// }
+
+// function show(el) {
+//   el.style.display = '';
+// }
+
+// function enable(el) {
+//   el.disabled = false;
+// }
+
+// function disable(el) {
+//   el.disabled = true;
+// }
+
+// function submitForm(answer) {
+//   // Pretend it's hitting the network.
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (answer.toLowerCase() === 'istanbul') {
+//         resolve();
+//       } else {
+//         reject(new Error('Good guess but a wrong answer. Try again!'));
+//       }
+//     }, 1500);
+//   });
+// }
+
+// let form = document.getElementById('form');
+// let textarea = document.getElementById('textarea');
+// let button = document.getElementById('button');
+// let loadingMessage = document.getElementById('loading');
+// let errorMessage = document.getElementById('error');
+// let successMessage = document.getElementById('success');
+// form.onsubmit = handleFormSubmit;
+// textarea.oninput = handleTextareaChange;
+
+// import { useState } from 'react';
+
+// export default function MovingDot() {
+//   const [position, setPosition] = useState({
+//     x: 0,
+//     y: 0
+//   });
+//   return (
+//     <div
+//       onPointerMove={e => {
+//         setPosition({
+//           x: e.clientX,
+//           y: e.clientY
+//         });
+//       }}
+//       style={{
+//         position: 'relative',
+//         width: '100vw',
+//         height: '100vh',
+//       }}>
+//       <div style={{
+//         position: 'absolute',
+//         backgroundColor: 'red',
+//         borderRadius: '50%',
+//         transform: `translate(${position.x}px, ${position.y}px)`,
+//         left: -10,
+//         top: -10,
+//         width: 20,
+//         height: 20,
+//       }} />
+//     </div>
+//   )
+// }
+
+// import React from "react";
+// import { useState } from "react";
+
+// export default function FeedbackForm()
+// {
+// const [text,setText]=useState('');
+// const [isSending,setIsSending]=useState(false);
+// const [sent,isSent]=useState(false);
+
+// async function handleSubmit(e){
+//     e.preventDefault();
+//     setIsSending(true);
+//     await 
+// }
+
+
+
+//   return(
+
+//     <>
+    
+//     </>
+//   )
+// }
+
 import { useState } from "react";
 
 export default function Form()
-
-const[isSent,setIsSent]=useState(false);
-const[message,setMessage]=useState("hii");
 {
-  return(
-    <>
+  useState[firstName,setFirstName]=useState('');
+  useState[lastName,setLastName]=useState('');
+  useState[fullName,setFullName]=useState('');
 
-    </>
-  )
+  function handleFirst(e)
+  {
+    setFirstName(e.target.value);
+    setFullName(e.target.value+''+lastName);
+  }
+
+  function handleLast(e)
+  {
+    setLastName(e.target.value);
+    setFullName(firstName+''+e.target.value);
+  }
+
 }
-
-
-
