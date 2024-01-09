@@ -259,7 +259,6 @@
 //   );
 // }
 
-
 // import { useState } from "react";
 // export default function Counter()
 // {
@@ -277,7 +276,6 @@
 //     </>
 //   )
 // }
-
 
 // import { useState } from "react";
 
@@ -312,14 +310,13 @@
 //   })
 // }
 
-
 // return
 // (
 //   <>
 //    <label>
 //         First name:
 //         <input
-          
+
 //           onChange={addfirstName}
 //         />
 //       </label>
@@ -382,8 +379,6 @@
 //     </>
 //   );
 // }
-
-
 
 // async function handleFormSubmit(e) {
 //   e.preventDefault();
@@ -497,37 +492,188 @@
 // async function handleSubmit(e){
 //     e.preventDefault();
 //     setIsSending(true);
-//     await 
+//     await
 // }
-
-
 
 //   return(
 
 //     <>
-    
+
 //     </>
 //   )
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
 
-export default function Form()
-{
-  useState[firstName,setFirstName]=useState('');
-  useState[lastName,setLastName]=useState('');
-  useState[fullName,setFullName]=useState('');
+// export default function Form()
+// {
+//   const[firstName,setFirstName]=useState('');
+//   const[lastName,setLastName]=useState('');
+//   const[fullName,setFullName]=useState('');
 
-  function handleFirst(e)
-  {
-    setFirstName(e.target.value);
-    setFullName(e.target.value+''+lastName);
-  }
+//   function handleFirst(e)
+//   {
+//     setFirstName(e.target.value);
+//     setFullName(e.target.value+''+lastName);
+//   }
 
-  function handleLast(e)
-  {
-    setLastName(e.target.value);
-    setFullName(firstName+''+e.target.value);
-  }
+//   function handleLast(e)
+//   {
+//     setLastName(e.target.value);
+//     setFullName(firstName+''+e.target.value);
+//   }
 
-}
+//   return(
+//     <>
+
+//     <h1>Check In!</h1>
+// <div>
+//     <label>
+//       Fisrt Name:{''}
+//       <input
+//       value={firstName}
+// onChange={handleFirst}
+//       >
+//       </input>
+//     </label>
+// </div>
+
+// <div>
+//     <label>
+//       Last Name:{''}
+//       <input
+
+//       value={lastName}
+//       onChange={handleLast}>
+
+//       </input>
+//     </label>
+//     </div>
+
+//     <p>Your Result is:{firstName}    {lastName}   </p>
+//     </>
+
+//   )
+
+// }
+
+// import { useState } from "react";
+
+// export default function Ace() {
+
+//   const[isActive,setIsActive]=useState(false);
+//   return (
+//     <>
+//       <Panel title="Shaival" isActive={true}>
+//         XW
+//       </Panel>
+//       <Panel title="Heet" isActive={true}>
+//         XghgW
+//       </Panel>
+//     </>
+//   );
+// }
+
+// function Panel({title,children,isActive})
+// {
+//   return(
+//     <section >
+
+//       <h3>{title}</h3>
+//       {isActive ? (
+//         <p>{children}</p>
+//       ) : (
+//         <button onClick={()=>
+//         {
+//           setIsActive(true)
+//         }}>Show</button>
+//       )}
+
+//     </section>
+//   )
+// }
+
+// import React, { useReducer } from "react";
+
+// const xyz=
+// {
+//   count:0
+// }
+
+// const counterReducer = (state, action) => {
+
+//   switch (action.type) {
+//     case "Increment":
+//       return { count: state.count + 1 };
+//     case "Decrement":
+//       return { count: state.count - 1 };
+//     case "Reset":
+//       return { count: 0 };
+//     default:
+//       return state;
+//   }
+
+// };
+
+// const Counter = () => {
+//   // useReducer returns the current state and a dispatch function
+//   const [state, dispatch] = useReducer(counterReducer, {count:0} );
+
+//   return (
+//     <div>
+//       <p>Count: {state.count}</p>
+//       <button onClick={() => dispatch({ type: 'Increment' })}>Increment</button>
+//       <button onClick={() => dispatch({ type: 'Decrement' })}>Decrement</button>
+//       <button onClick={() => dispatch({ type: 'Reset' })}>Reset</button>
+
+//     </div>
+//   );
+// };
+
+// export default Counter;
+
+import React from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
+
+
+
+// import React, { useRef, useEffect } from 'react';
+
+// function MyComponent() {
+//   const myInputRef = useRef(null);
+
+//   useEffect(() => {
+//     // Focus on the input element when the component mounts
+//     myInputRef.current.focus();
+//   }, []);
+
+//   return (
+//     <input type="text" ref={myInputRef} />
+//   );
+// }
+
+// export default MyComponent;
+
+// import React from "react";
+// import  { useRef } from 'react';
+
+
+// function MyComponent() {
+//   const myArrayRef = useRef([]);
+
+//   const handleButtonClick = () => {
+//     myArrayRef.current.push('New Value');
+//     console.log(myArrayRef.current);
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={handleButtonClick}>Add Value</button>
+//     </div>
+//   );
+// }
+
+// export default MyComponent;
+
+import {Rea}
